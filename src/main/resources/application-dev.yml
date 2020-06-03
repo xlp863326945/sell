@@ -1,0 +1,29 @@
+spring:
+    datasource:
+        name: test
+        url: jdbc:mysql://127.0.0.1:3306/sell?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+        username: root
+        password: 123456
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      show-sql: true
+
+    data:
+      mongodb:
+        uri: mongodb://192.168.100.231:27017/sunsea_warehouse
+
+    redis:
+      host: 127.0.0.1
+      password: homewell
+      port: 6379
+      lettuce:
+        pool:
+          max-idle: 100
+          min-idle: 1
+          max-active: 1000
+          max-wait: -1ms
+        shutdown-timeout: 10000ms
+      database: 0
+      timeout: 60000ms
+
+
