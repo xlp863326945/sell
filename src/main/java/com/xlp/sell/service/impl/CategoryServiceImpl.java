@@ -1,7 +1,8 @@
-package com.xlp.sell.service;
+package com.xlp.sell.service.impl;
 
 import com.xlp.sell.dao.ProductCategoryDao;
 import com.xlp.sell.entity.ProductCategory;
+import com.xlp.sell.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ import java.util.Optional;
  * @Date 2020/6/3 17:06
  */
 @Service
-public class CategoryServiceImpl implements CategoryService{
+public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private ProductCategoryDao productCategoryDao;
 

@@ -44,6 +44,10 @@ public class ProductInfo {
     */
     private String productIcon;
     /**
+     * 商品状态
+     */
+    private Integer productStatus;
+    /**
     * 类目编号
     */
     private Integer categoryType;
