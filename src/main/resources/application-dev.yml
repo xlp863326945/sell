@@ -30,4 +30,4 @@ spring:
 server:
   servlet:
     context-path: /sell
-  port: 8090
+  port: 8080

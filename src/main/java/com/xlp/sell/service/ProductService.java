@@ -1,5 +1,6 @@
 package com.xlp.sell.service;
 
+import com.xlp.sell.dto.CartDto;
 import com.xlp.sell.entity.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -28,6 +29,7 @@ public interface ProductService {
 
     ProductInfo save(ProductInfo productInfo);
     //加库存
-
+    void increaseStock(List<CartDto> cartDtoList);
     //减库存
+    void decreaseStock(List<CartDto> cartDtoList);
 }
