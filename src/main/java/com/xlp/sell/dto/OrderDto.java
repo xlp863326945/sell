@@ -1,8 +1,11 @@
 package com.xlp.sell.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.xlp.sell.entity.OrderDetail;
 import com.xlp.sell.enums.OrderStatusEnum;
 import com.xlp.sell.enums.PayStatusEnum;
+import com.xlp.sell.utils.serializer.DateToLongSerializer;
 import lombok.Data;
 
 import javax.persistence.Id;
@@ -17,6 +20,7 @@ import java.util.List;
  * @Date 2020/6/10 16:17
  */
 @Data
+//@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderDto {
     /**
      * 订单ID
@@ -53,10 +57,12 @@ public class OrderDto {
     /**
      * 创建时间
      */
+    @JsonSerialize(using = DateToLongSerializer.class)
     private Date createTime;
     /**
      * 更新时间
      */
+    @JsonSerialize(using = DateToLongSerializer.class)
     private Date updateTime;
 
     private List<OrderDetail> orderDetailList;

@@ -25,7 +25,6 @@ import java.util.stream.Collectors;
  * @Author xianglianpeng@sunseaaiot.com
  * @Date 2020/6/4 10:56
  */
-@Controller
 @RestController
 @RequestMapping("/buyer/product")
 public class BuyerProductController {

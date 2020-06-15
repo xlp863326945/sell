@@ -1,5 +1,7 @@
 package com.xlp.sell.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.xlp.sell.utils.serializer.DateToLongSerializer;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -49,10 +51,12 @@ public class OrderDetail {
     /**
      * 创建时间
      */
+    @JsonSerialize(using = DateToLongSerializer.class)
     private Date createTime;
     /**
      * 更新时间
      */
+    @JsonSerialize(using = DateToLongSerializer.class)
     private Date updateTime;
 
 }
